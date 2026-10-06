@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <nav aria-label="Navigation principale">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href = "contact.html">Contact</a></li>
+    </ul>
+  </nav>
+    <title>CV - Matthéo Lefebvre</title>
+    <style>
+      :root {
+        --bg: #f3f6fb;
+        --panel: #ffffff;
+        --primary: #143d59;
+        --secondary: #2f6f9f;
+        --accent: #e6f0fa;
+        --text: #1d2430;
+        --muted: #5d6878;
+        --line: #dfe8f3;
+        --shadow: 0 12px 30px rgba(20, 61, 89, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #eef4fb 0%, #f8fafd 100%);
+        color: var(--text);
+      }
+
+      .page {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 40px 50px;
+      }
+
+      .identity h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+        letter-spacing: 0.04em;
+      }
+
+      .identity p {
+        margin: 8px 0 0;
+        font-size: 1.1rem;
+        opacity: 0.92;
+      }
+
+      .contact {
+        display: grid;
+        gap: 8px;
+        font-size: 0.95rem;
+        text-align: right;
+      }
+
+      .contact span {
+        display: block;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+      }
+
+      .sidebar {
+        background: #f9fbfe;
+        padding: 30px 25px;
+        border-right: 1px solid var(--line);
+      }
+
+      .section {
+        margin-bottom: 28px;
+      }
+
+      .section h2 {
+        margin: 0 0 16px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--primary);
+      }
+
+      .label {
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 6px;
+      }
+
+      .value {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .skill-list,
+      .tag-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .skill-list li,
+      .tag-list li {
+        background: var(--accent);
+        color: var(--primary);
+        border: 1px solid #dfeaf7;
+        border-radius: 999px;
+        padding: 7px 12px;
+        font-size: 0.88rem;
+        font-weight: 600;
+      }
+
+      .main {
+        padding: 30px 35px 40px;
+      }
+
+      .summary {
+        margin-bottom: 30px;
+      }
+
+      .summary p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.8;
+        font-size: 1rem;
+      }
+
+      .experience,
+      .education,
+      .projects {
+        margin-top: 26px;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 22px;
+      }
+
+      .job {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 18px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .job:last-child {
+        border-bottom: none;
+      }
+
+      .date {
+        font-weight: 700;
+        color: var(--secondary);
+        font-size: 0.92rem;
+        padding-top: 4px;
+      }
+
+      .job h3 {
+        margin: 0 0 4px;
+        font-size: 1.18rem;
+        color: var(--text);
+      }
+
+      .company {
+        margin: 0 0 8px;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .job ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .project-list {
+        display: grid;
+        gap: 18px;
+      }
+
+      .project {
+        background: #f8fbff;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px 20px;
+      }
+
+      .project h3 {
+        margin: 0 0 8px;
+        font-size: 1.08rem;
+      }
+
+      .project p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      @media (max-width: 860px) {
+        .page {
+          margin: 20px 12px;
+          border-radius: 12px;
+        }
+
+        .header {
+          padding: 30px 24px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 18px;
+        }
+
+        .contact {
+          text-align: left;
+        }
+
+        .content {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          border-right: none;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .main {
+          padding: 24px 22px 30px;
+        }
+
+        .job {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="identity">
+          <h1>Matthéo Lefebvre</h1>
+          <p>Chargé de communication</p>
+        </div>
+        <div class="contact">
+          <span>mattheo.lefebvre62100@gmail.com</span>
+          <span>+33 6 35 71 02 55</span>
+          <span>Calais, France</span>
+          <span>linkedin.com/in/a completer</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <aside class="sidebar">
+          <section class="section">
+            <h2>Profil</h2>
+            <div class="value">
+              Etudiant en 1ère année de DEUST WMI à L'université du Littoral Côte D'Opale (ULCO), je suis a la recherche d'une alternance dans le domaine de la communication, notamment en tant que chargé de communication. Motivé et créatif, je souhaite mettre en pratique mes compétences en communication digitle, création de contenu et contenus et outils.
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Compétences</h2>
+            <ul class="skill-list">
+              <li>Photoshop (Adobe)</li>
+              <li>InDesign (Adobe)</li>
+              <li>Premiere Pro (Adobe)</li>
+              <li>Illustrator (Adobe)</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>Langues</h2>
+            <div class="label">Français</div>
+            <div class="value">Langue maternelle</div>
+            <div class="label" style="margin-top: 12px;">Anglais</div>
+            <div class="value">Niveau Scolaire</div>
+          </section>
+
+          <section class="section">
+            <h2>Centres d'intérêt</h2>
+            <ul class="tag-list">
+              <li>Design</li>
+              <li>Montage vidéo</li>
+              <li>Script</li>
+              <li>Musique</li>
+              <li>Ecriture</li>
+            </ul>
+          </section>
+        </aside>
+
+        <main class="main">
+          <section class="summary">
+            <p>
+            Passioné par le design et la communication, je suis constamment à la recherche de nouvelles opportunités pour développer mes compétences et contribuer à des projets innovants. Mon objectif est de devenir un professionnel polyvalent capable de créer des expériences engageantes et mémorables pour les utilisateurs.
+            </p>
+          </section>
+
+          <section class="experience">
+            <h2>Expérience</h2>
+            <div class="timeline">
+              <article class="job">
+                <div class="date">Juillet 2024/2025 et Août 2024</div>
+                <div>
+                  <h3>Employé Polyvalent</h3>
+                  <p class="company">Cap Energie : Esat "Les Ateliers du Channel"</p>
+                  <ul>
+                    <li>Nettoyage et traitements de bobines</li>
+                    <li>Contrôle visuel de pièces</li>
+                    <li>Manutention et rangement de bobines</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="job">
+                <div class="date">Juin 2024</div>
+                <div>
+                  <h3>Stagiaire en secretariat / administratif</h3>
+                  <p class="company">Cap Energie : Esat "Les Ateliers du Channel"</p>
+                  <ul>
+                    <li>Saisie de traitements de données administratif</li>
+                    <li>Création de gestion de tableaux Excel</li>
+                    <li>Utilisation de formules de calcul</li>
+                    <li>Mise en page de documents administratifs</li>
+                  </ul>
+                </div>
+              </article>
+          </section>
+
+          
+          <section class="projects">
+            <h2>Projets</h2>
+            <div class="project-list">
+              <article class="project">
+                <h3>Portfolio client</h3>
+                <p>Création de logo, affiches et supports de communication.</p>
+              </article>
+
+              <article class="project">
+                <h3>Application de gestion interne</h3>
+                <p>Développement d'un tableau de bord pour suivre les tâches, les projets et les délais avec un dashboard complet et ergonomique.</p>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
