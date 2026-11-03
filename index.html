@@ -1,29 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Démo Accessibilité (a11y) & ARIA</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre affiché dans l'onglet du navigateur : remplace par ton nom -->
+    <title>Matthéo LEFEBVRE | Portfolio</title>
+    <meta name="description" content="Portfolio de Matthéo LEFEBVRE, étudiant en 1ère année de WMI.">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
 
-  <body>
-    <!-- Sémantique native : pas besoin de role="banner" -->
     <header>
-      <h1>Mon Portfolio</h1>
+        <!-- LOGO : mon prénom + nom (clique = retour à l'accueil) -->
+        <a class="logo" href="index.html">Matthéo LEFEBVRE</a>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="actif">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="projet.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav aria-label="Navigation principale">
-      <ul>
-        <li><a href="#accueil" aria-current="page">Accueil</a></li>
-        <li><a href="#cours">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#projets">Projets</a></li>
-      </ul>
-    </nav>
+    <main>
 
-  
+        <!-- ========== SECTION HÉRO : première chose que la personne va voir ========== -->
+        <section class="hero">
+            <section class="hero-texte">
+                <p class="surtitre">Bonjour, je suis</p>
+                <!-- MON NOM COMPLET -->
+                <h1>Matthéo LEFEBVRE</h1>
+                <!--TITRE : "Étudiant en 1ère année de WMI" -->
+                <p class="accroche">Étudiant en 1ère année de WMI, passionné par <span class="pointille">Par la communication numérique, conception de vidéos, le graphsime.</span>.</p>
+                <p class="boutons">
+                    <a class="bouton" href="projet.html">Voir mes projets</a>
+                    <a class="bouton bouton-contour" href="contact.html">Me contacter</a>
+                </p>
+            </section>
+
+            <!-- PHOTO -->
+            <section class="hero-photo">
+            <img src="https://cdn.discordapp.com/attachments/1552701055630839808/1552715302817632349/IMG_2703.jpg?ex=6aeab190&is=6ae96010&hm=e9b6661c66965a605d31d77c19209e3af88b6af55ce28ea69925cdad8475cf4c" >
+        </section>
+
+        <!-- ========== À PROPOS : qui je suis ? ========== -->
+        <section>
+            <h2>À propos de moi</h2>
+            <!-- 3 à 5 lignes : mon parcours, ce que j'aime, mes objectifs -->
+            <p class="texte-large">
+                <span class="pointille">Je suis un étudiant en 1ère année de WMI, passionné par la communication numérique, la conception de vidéos et le graphisme.</span>
+                <span class="pointille">Je crée des contenus engageants et impactants sur les réseaux sociaux.</span>
+                <span class="pointille">Je cherche à développer mes compétences en design et en développement web.</span>
+            </p>
+        </section>
+
+        <!-- ========== COMPÉTENCES : 3 cartes (CSS Grid) ========== -->
+        <section>
+            <h2>Mes compétences</h2>
+            <section class="grille">
+                <article class="carte">
+                    <h3>Réseaux Sociaux</h3>
+                    <p class="pointille">Stratégie Marketing</p>
+                </article>
+                <article class="carte">
+                    <h3>Design Graphique + Montage Vidéo</h3>
+                    <p class="pointille">InDesign, Photoshop, Illustrator, Premiere Pro</p>
+                </article>
+                <article class="carte">
+                    <h3 class="pointille">Développement Web</h3>
+                    <p class="pointille">HTML, CSS, JavaScript</p>
+                </article>
+            </section>
+        </section>
+
+        <!-- ========== APERÇU DES PROJETS QUE J'AI RÉALISÉS ========== -->
+        <section>
+            <h2>Derniers projets</h2>
+            <section class="grille">
+                <article class="carte">
+                    <h3>Ce portfolio</h3>
+                    <p>Site réalisé en HTML et CSS avec Flexbox et CSS Grid.</p>
+                </article>
+                <article class="carte">
+                    <h3 class="pointille">Titre du projet</h3>
+                    <p class="pointille">.......... (courte description)</p>
+                </article>
+                <article class="carte">
+                    <h3 class="pointille">Titre du projet</h3>
+                    <p class="pointille">.......... (courte description)</p>
+                </article>
+            </section>
+            <p class="boutons">
+                <a class="bouton bouton-contour" href="projet.html">Tous mes projets</a>
+            </p>
+        </section>
+
+    </main>
+
     <footer>
-      <p>&copy; 2026 - Cours HTML & Accessibilité Numérique</p>
+        <p>© 2026 Matthéo LEFEBVRE – Portfolio WMI</p>
     </footer>
-  </body>
+
+</body>
 </html>

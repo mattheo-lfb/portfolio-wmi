@@ -1,0 +1,228 @@
+/* ==========================================================
+   STYLE COMMUN (header, nav, footer, boutons, pointillés)
+   ========================================================== */
+
+/* Remise à zéro : on enlève les marges par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fond noir + dégradé radial bleu nuit, police Gotham
+   (Montserrat / Arial servent de police de secours) */
+body {
+    font-family: "Gotham", "Montserrat", Arial, sans-serif;
+    color: #e8eefc;
+    line-height: 1.7;
+    min-height: 100vh;
+    background-color: #000000;
+    background-image: radial-gradient(circle at 50% 0%, #12296b 0%, #08153a 40%, #000000 100%);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- EN-TÊTE + NAVIGATION (Flexbox) ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem 8%;
+    border-bottom: 1px solid rgba(77, 163, 255, 0.25);
+}
+
+.logo {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: #b8c7ec;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.actif {
+    color: #ffffff;
+    border-bottom-color: #4da3ff;
+}
+
+/* ---------- CONTENU PRINCIPAL ---------- */
+main {
+    flex: 1;
+    padding: 3rem 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid #4da3ff;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #ffffff;
+}
+
+a {
+    color: #4da3ff;
+}
+
+/* ---------- BOUTONS ---------- */
+.boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 0.8rem 1.7rem;
+    background-color: #4da3ff;
+    color: #04102b;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #4da3ff;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.bouton:hover {
+    background-color: transparent;
+    color: #4da3ff;
+}
+
+.bouton-contour {
+    background-color: transparent;
+    color: #4da3ff;
+}
+
+.bouton-contour:hover {
+    background-color: #4da3ff;
+    color: #04102b;
+}
+
+/* ---------- ZONES À COMPLÉTER (pointillés) ---------- */
+.pointille {
+    color: #8fa3d4;
+    border-bottom: 2px dotted #4da3ff;
+}
+
+/* ---------- PIED DE PAGE ---------- */
+footer {
+    text-align: center;
+    padding: 1.5rem 8%;
+    border-top: 1px solid rgba(77, 163, 255, 0.25);
+    color: #8fa3d4;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================
+   STYLE PROPRE À CETTE PAGE
+   ========================================================== */
+
+/* ---------- HÉRO (Flexbox) : texte à gauche, photo à droite ---------- */
+.hero {
+    display: flex;
+    flex-wrap: wrap;            /* sur petit écran, la photo passe dessous */
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.hero-texte {
+    flex: 1 1 360px;
+}
+
+.surtitre {
+    color: #4da3ff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.accroche {
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    color: #b8c7ec;
+    max-width: 560px;
+}
+
+/* Cadre pointillé qui remplace ta photo */
+.hero-photo {
+    flex: 0 0 280px;
+    width: 280px;
+    height: 280px;
+    border: 3px dotted #4da3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #8fa3d4;
+    padding: 1.5rem;
+}
+
+/* Quand tu mets une vraie image dans .hero-photo */
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.texte-large {
+    max-width: 760px;
+    font-size: 1.1rem;
+}
+
+/* ---------- GRILLE DE CARTES (CSS Grid) ----------
+   auto-fit + minmax : le nombre de colonnes s'adapte tout seul */
+.grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.carte {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(77, 163, 255, 0.25);
+    border-radius: 12px;
+    padding: 1.6rem;
+}
+
+.carte:hover {
+    border-color: #4da3ff;
+}
+
+.carte h3 {
+    margin-bottom: 0.6rem;
+}

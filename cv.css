@@ -1,0 +1,231 @@
+/* ==========================================================
+   STYLE COMMUN (header, nav, footer, boutons, pointillés)
+   Ce bloc est identique dans les 4 fichiers .css
+   ========================================================== */
+
+/* --- POLICE GOTHAM ---
+   Gotham est une police payante : elle ne s'affiche que si elle est
+   installée sur ton ordinateur OU si tu ajoutes les fichiers de la police.
+   Pour l'ajouter : crée un dossier "fonts", mets-y tes fichiers Gotham,
+   puis décommente le bloc @font-face ci-dessous (supprime le début et la fin
+   du commentaire qui l'entoure). */
+
+/*
+@font-face {
+    font-family: "Gotham";
+    src: url("fonts/Gotham-Book.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("fonts/Gotham-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+*/
+
+/* Remise à zéro : on enlève les marges par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fond noir + dégradé radial bleu nuit, police Gotham
+   (Montserrat / Arial servent de police de secours) */
+body {
+    font-family: "Gotham", "Montserrat", Arial, sans-serif;
+    color: #e8eefc;
+    line-height: 1.7;
+    min-height: 100vh;
+    background-color: #000000;
+    background-image: radial-gradient(circle at 50% 0%, #12296b 0%, #08153a 40%, #000000 100%);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- EN-TÊTE + NAVIGATION (Flexbox) ---------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.5rem 8%;
+    border-bottom: 1px solid rgba(77, 163, 255, 0.25);
+}
+
+.logo {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: #b8c7ec;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.actif {
+    color: #ffffff;
+    border-bottom-color: #4da3ff;
+}
+
+/* ---------- CONTENU PRINCIPAL ---------- */
+main {
+    flex: 1;
+    padding: 3rem 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid #4da3ff;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #ffffff;
+}
+
+a {
+    color: #4da3ff;
+}
+
+/* ---------- BOUTONS ---------- */
+.boutons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 0.8rem 1.7rem;
+    background-color: #4da3ff;
+    color: #04102b;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #4da3ff;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.bouton:hover {
+    background-color: transparent;
+    color: #4da3ff;
+}
+
+.bouton-contour {
+    background-color: transparent;
+    color: #4da3ff;
+}
+
+.bouton-contour:hover {
+    background-color: #4da3ff;
+    color: #04102b;
+}
+
+/* ---------- ZONES À COMPLÉTER (pointillés) ---------- */
+.pointille {
+    color: #8fa3d4;
+    border-bottom: 2px dotted #4da3ff;
+}
+
+/* ---------- PIED DE PAGE ---------- */
+footer {
+    text-align: center;
+    padding: 1.5rem 8%;
+    border-top: 1px solid rgba(77, 163, 255, 0.25);
+    color: #8fa3d4;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================
+   STYLE PROPRE À CETTE PAGE
+   ========================================================== */
+
+.intro {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    color: #b8c7ec;
+}
+
+/* ---------- DEUX COLONNES (Flexbox) ----------
+   flex: grandir  rétrécir  largeur-de-base
+   La colonne de droite est 2 fois plus large que celle de gauche.
+   Avec flex-wrap, les colonnes s'empilent sur petit écran. */
+.cv-contenu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.cv-lateral {
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.cv-principal {
+    flex: 2 1 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.bloc h2 {
+    font-size: 1.4rem;
+}
+
+.bloc ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* ---------- ÉTAPES DU PARCOURS (ligne verticale type chronologie) ---------- */
+.etape {
+    border-left: 2px solid rgba(77, 163, 255, 0.5);
+    padding-left: 1.4rem;
+    margin-bottom: 1.8rem;
+}
+
+.etape:hover {
+    border-left-color: #4da3ff;
+}
+
+.details {
+    color: #4da3ff;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
