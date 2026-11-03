@@ -1,15 +1,6 @@
 /* ==========================================================
    STYLE COMMUN (header, nav, footer, boutons, pointillés)
-   Ce bloc est identique dans les 4 fichiers .css
    ========================================================== */
-
-/* --- POLICE GOTHAM ---
-   Gotham est une police payante : elle ne s'affiche que si elle est
-   installée sur ton ordinateur OU si tu ajoutes les fichiers de la police.
-   Pour l'ajouter : crée un dossier "fonts", mets-y tes fichiers Gotham,
-   puis décommente le bloc @font-face ci-dessous (supprime le début et la fin
-   du commentaire qui l'entoure). */
-
 /*
 @font-face {
     font-family: "Gotham";
