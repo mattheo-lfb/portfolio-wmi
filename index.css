@@ -226,3 +226,84 @@ footer {
 .carte h3 {
     margin-bottom: 0.6rem;
 }
+
+
+/* ==========================================================
+   RESPONSIVE - VERSION MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* HEADER ET NAVIGATION */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 5%;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* CONTENU PRINCIPAL */
+    main {
+        padding: 2rem 5%;
+        gap: 3rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* SECTION HERO */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-texte {
+        flex: 1 1 auto;
+    }
+
+    .hero-photo {
+        flex: none;
+        width: 220px;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    .accroche {
+        font-size: 1rem;
+    }
+
+    /* BOUTONS */
+    .boutons {
+        justify-content: center;
+    }
+
+    /* TEXTE */
+    .texte-large {
+        font-size: 1rem;
+    }
+
+    /* CARTES */
+    .grille {
+        grid-template-columns: 1fr;
+    }
+
+    .carte {
+        padding: 1.2rem;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 1.5rem 5%;
+    }
+}

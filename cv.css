@@ -220,3 +220,76 @@ footer {
     font-size: 0.95rem;
     margin-bottom: 0.4rem;
 }
+
+
+/* ==========================================================
+   RESPONSIVE - VERSION MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* HEADER ET NAVIGATION */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 5%;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* CONTENU PRINCIPAL */
+    main {
+        padding: 2rem 5%;
+        gap: 3rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* INTRODUCTION */
+    .intro {
+        font-size: 1rem;
+    }
+
+    /* DEUX COLONNES */
+    .cv-contenu {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .cv-lateral,
+    .cv-principal {
+        flex: 1 1 auto;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    /* BLOCS DU CV */
+    .bloc h2 {
+        font-size: 1.25rem;
+    }
+
+    /* PARCOURS */
+    .etape {
+        padding-left: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .details {
+        font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 1.5rem 5%;
+    }
+}

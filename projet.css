@@ -3,26 +3,6 @@
    Ce bloc est identique dans les 4 fichiers .css
    ========================================================== */
 
-/* --- POLICE GOTHAM ---
-   Gotham est une police payante : elle ne s'affiche que si elle est
-   installée sur ton ordinateur OU si tu ajoutes les fichiers de la police.
-   Pour l'ajouter : crée un dossier "fonts", mets-y tes fichiers Gotham,
-   puis décommente le bloc @font-face ci-dessous (supprime le début et la fin
-   du commentaire qui l'entoure). */
-
-/*
-@font-face {
-    font-family: "Gotham";
-    src: url("fonts/Gotham-Book.woff2") format("woff2");
-    font-weight: 400;
-}
-@font-face {
-    font-family: "Gotham";
-    src: url("fonts/Gotham-Bold.woff2") format("woff2");
-    font-weight: 700;
-}
-*/
-
 /* Remise à zéro : on enlève les marges par défaut du navigateur */
 * {
     margin: 0;
@@ -30,10 +10,8 @@
     box-sizing: border-box;
 }
 
-/* Fond noir + dégradé radial bleu nuit, police Gotham
-   (Montserrat / Arial servent de police de secours) */
 body {
-    font-family: "Gotham", "Montserrat", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
     color: #e8eefc;
     line-height: 1.7;
     min-height: 100vh;
@@ -247,4 +225,69 @@ footer {
     gap: 1.2rem;
     margin-top: auto;           /* pousse les liens tout en bas de la carte */
     font-weight: 700;
+}
+
+
+/* ==========================================================
+   RESPONSIVE - VERSION MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* HEADER ET NAVIGATION */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 5%;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* CONTENU PRINCIPAL */
+    main {
+        padding: 2rem 5%;
+        gap: 3rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* INTRODUCTION */
+    .intro {
+        font-size: 1rem;
+    }
+
+    /* GRILLE DE PROJETS */
+    .grille-projets {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .projet-image {
+        height: 180px;
+    }
+
+    .projet-texte {
+        padding: 1.2rem;
+    }
+
+    /* LIENS */
+    .liens {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 1.5rem 5%;
+    }
 }

@@ -1,103 +1,225 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact | Matthéo LEFEBVRE</title>
+
     <meta name="description" content="Contactez Matthéo LEFEBVRE pour un stage, une alternance ou un projet.">
 
+    <!-- Tailwind CSS -->
     <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body>
 
-    <header>
-        <a class="logo" href="index.html">Matthéo LEFEBVRE</a>
+<body class="min-h-screen flex flex-col text-[#e8eefc] leading-[1.7] bg-black bg-[radial-gradient(circle_at_50%_0%,#12296b_0%,#08153a_40%,#000000_100%)] bg-fixed font-sans">
+
+    <!-- HEADER -->
+    <header class="flex flex-col md:flex-row justify-between items-center gap-4 px-5 sm:px-8 md:px-[8%] py-6 border-b border-[#4da3ff]/25">
+
+        <a href="index.html" class="text-white font-bold text-xl tracking-wider no-underline">
+            Matthéo LEFEBVRE
+        </a>
+
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="projet.html">Projets</a></li>
-                <li><a href="contact.html" class="actif">Contact</a></li>
+            <ul class="flex flex-wrap justify-center gap-4 sm:gap-8 list-none">
+
+                <li>
+                    <a href="index.html" class="text-[#b8c7ec] no-underline pb-1 border-b-2 border-transparent hover:text-white hover:border-[#4da3ff]">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cv.html" class="text-[#b8c7ec] no-underline pb-1 border-b-2 border-transparent hover:text-white hover:border-[#4da3ff]">
+                        CV
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projet.html" class="text-[#b8c7ec] no-underline pb-1 border-b-2 border-transparent hover:text-white hover:border-[#4da3ff]">
+                        Projets
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact_tailwind.html" class="text-white no-underline pb-1 border-b-2 border-[#4da3ff]">
+                        Contact
+                    </a>
+                </li>
+
             </ul>
         </nav>
+
     </header>
 
-    <main>
 
+    <!-- CONTENU PRINCIPAL -->
+    <main class="flex-1 px-5 sm:px-8 md:px-[8%] py-8 md:py-12 flex flex-col gap-12 md:gap-[4.5rem]">
+
+        <!-- INTRODUCTION -->
         <section>
-            <h1>Me contacter</h1>
-            <!-- Dire pourquoi on peut me contacter : stage, alternance, projet... -->
-            <p class="intro">Une question, une opportunité de <span class="pointille">stage, alternance, projet</span> ? Écris-moi !</p>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl leading-[1.15] text-white font-bold">
+                Me contacter
+            </h1>
+
+            <p class="mt-4 text-base sm:text-lg text-[#b8c7ec] max-w-[620px]">
+                Une question, une opportunité de
+                <span class="text-[#8fa3d4] border-b-2 border-dotted border-[#4da3ff]">
+                    stage, alternance, projet
+                </span>
+                ? Écris-moi !
+            </p>
+
         </section>
 
-        <!-- ========== 2 COLONNES (Flexbox) : coordonnées + formulaire ========== -->
-        <section class="contact-contenu">
 
-            <!-- ----- Coordonnées ----- -->
-            <section class="contact-infos">
-                <h2>Mes coordonnées</h2>
-                <ul>
-                    <li>
-                        <strong>Email</strong>
-                        <span class="pointille">mattheo.lefebvre@exemple.com</span>
+        <!-- DEUX COLONNES -->
+        <section class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+
+            <!-- COORDONNÉES -->
+            <section class="flex-[1_1_280px] w-full min-w-0">
+
+                <h2 class="text-white text-2xl font-bold mb-6 pl-4 border-l-4 border-[#4da3ff]">
+                    Mes coordonnées
+                </h2>
+
+                <ul class="flex flex-col gap-5 list-none">
+
+                    <li class="flex flex-col pb-4 border-b border-[#4da3ff]/20">
+                        <strong class="text-white">Email</strong>
+                        <span class="text-[#8fa3d4] border-b-2 border-dotted border-[#4da3ff] w-fit max-w-full break-all">
+                            mattheo.lefebvre@exemple.com
+                        </span>
                     </li>
-                    <li>
-                        <strong>Téléphone</strong>
-                        <span class="pointille">06 00 00 00 00</span>
+
+                    <li class="flex flex-col pb-4 border-b border-[#4da3ff]/20">
+                        <strong class="text-white">Téléphone</strong>
+                        <span class="text-[#8fa3d4] border-b-2 border-dotted border-[#4da3ff] w-fit">
+                            06 00 00 00 00
+                        </span>
                     </li>
-                    <li>
-                        <strong>Ville</strong>
-                        <span class="pointille">Calais</span>
+
+                    <li class="flex flex-col pb-4 border-b border-[#4da3ff]/20">
+                        <strong class="text-white">Ville</strong>
+                        <span class="text-[#8fa3d4] border-b-2 border-dotted border-[#4da3ff] w-fit">
+                            Calais
+                        </span>
                     </li>
-                    <li>
-                        <strong>LinkedIn</strong>
-                        <!-- Lien de mon profil -->
-                        <a href="#" class="pointille">lien de mon profil</a>
+
+                    <li class="flex flex-col pb-4 border-b border-[#4da3ff]/20">
+                        <strong class="text-white">LinkedIn</strong>
+                        <a href="#" class="text-[#8fa3d4] border-b-2 border-dotted border-[#4da3ff] w-fit">
+                            lien de mon profil
+                        </a>
                     </li>
-                    <li>
-                        <strong>GitHub</strong>
-                        <a href="https://github.com/mattheo-lfb" class="pointille">https://github.com/mattheo-lfb</a>
+
+                    <li class="flex flex-col pb-4 border-b border-[#4da3ff]/20">
+                        <strong class="text-white">GitHub</strong>
+                        <a href="https://github.com/mattheo-lfb" class="text-[#8fa3d4] border-b-2 border-dotted border-[#4da3ff] w-fit max-w-full break-all">
+                            https://github.com/mattheo-lfb
+                        </a>
                     </li>
+
                 </ul>
+
             </section>
 
-            <!-- ----- Formulaire -----
-                 Le bouton ouvre le logiciel mail du visiteur.
-                 Remplace l'adresse dans action="mailto:..." par la tienne. -->
-            <section class="contact-formulaire">
-                <h2>Envoyer un message</h2>
-                <form action="mailto:mattheo.lefebvre@exemple.com" method="post" enctype="text/plain">
 
-                    <label for="nom">Nom
-                        <input type="text" id="nom" name="nom" placeholder="Ton nom" required>
+            <!-- FORMULAIRE -->
+            <section class="flex-[2_1_400px] w-full min-w-0">
+
+                <h2 class="text-white text-2xl font-bold mb-6 pl-4 border-l-4 border-[#4da3ff]">
+                    Envoyer un message
+                </h2>
+
+                <form
+                    action="mailto:mattheo.lefebvre@exemple.com"
+                    method="post"
+                    enctype="text/plain"
+                    class="flex flex-col gap-5 bg-white/[0.04] border border-[#4da3ff]/25 rounded-xl p-5 sm:p-8"
+                >
+
+                    <label for="nom" class="flex flex-col gap-2 font-bold text-white">
+                        Nom
+
+                        <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="Ton nom"
+                            required
+                            class="w-full min-w-0 font-normal text-base p-3 bg-black/35 text-white border border-[#4da3ff]/40 rounded-lg focus:outline-2 focus:outline-[#4da3ff]"
+                        >
                     </label>
 
-                    <label for="email">Email
-                        <input type="email" id="email" name="email" placeholder="ton.email@exemple.com" required>
+
+                    <label for="email" class="flex flex-col gap-2 font-bold text-white">
+                        Email
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="ton.email@exemple.com"
+                            required
+                            class="w-full min-w-0 font-normal text-base p-3 bg-black/35 text-white border border-[#4da3ff]/40 rounded-lg focus:outline-2 focus:outline-[#4da3ff]"
+                        >
                     </label>
 
-                    <label for="sujet">Sujet
-                        <input type="text" id="sujet" name="sujet" placeholder="L'objet de ton message">
+
+                    <label for="sujet" class="flex flex-col gap-2 font-bold text-white">
+                        Sujet
+
+                        <input
+                            type="text"
+                            id="sujet"
+                            name="sujet"
+                            placeholder="L'objet de ton message"
+                            class="w-full min-w-0 font-normal text-base p-3 bg-black/35 text-white border border-[#4da3ff]/40 rounded-lg focus:outline-2 focus:outline-[#4da3ff]"
+                        >
                     </label>
 
-                    <label for="message">Message
-                        <textarea id="message" name="message" rows="6" placeholder="Écris ton message ici..." required></textarea>
+
+                    <label for="message" class="flex flex-col gap-2 font-bold text-white">
+                        Message
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Écris ton message ici..."
+                            required
+                            class="w-full min-w-0 font-normal text-base p-3 bg-black/35 text-white border border-[#4da3ff]/40 rounded-lg focus:outline-2 focus:outline-[#4da3ff] resize-y"
+                        ></textarea>
                     </label>
 
-                    <button class="bouton" type="submit">Envoyer le message</button>
+
+                    <button
+                        type="submit"
+                        class="w-full sm:w-auto self-start px-7 py-3 bg-[#4da3ff] text-[#04102b] font-bold text-base border-2 border-[#4da3ff] rounded-full cursor-pointer hover:bg-transparent hover:text-[#4da3ff] transition-colors"
+                    >
+                        Envoyer le message
+                    </button>
 
                 </form>
+
             </section>
 
         </section>
 
     </main>
 
-    <footer>
+
+    <!-- FOOTER -->
+    <footer class="text-center px-5 sm:px-[8%] py-6 border-t border-[#4da3ff]/25 text-[#8fa3d4] text-sm">
+
         <p>© 2026 Matthéo LEFEBVRE – Portfolio WMI</p>
+
     </footer>
 
 </body>
 </html>
-  
